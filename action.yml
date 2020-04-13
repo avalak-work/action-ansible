@@ -1,0 +1,25 @@
+# action.yml
+---
+
+name: 'Ansible'
+description: 'Ansible for GitHub Workflows'
+inputs:
+  vault_password:
+    description: Ansible Vault Password
+    required: false
+    default: ""
+
+  playbook:
+    description: Ansible Playbook
+    required: true
+
+  action:
+    description: Action (validata)
+    required: true
+    default: "validate"
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.action }}
