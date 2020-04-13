@@ -1,0 +1,38 @@
+## .github/workflows/build-image.yml
+---
+
+name: Build and push docker image
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    env:
+      DOCKER_REGISTRY: "docker.pkg.github.com"
+      CONTAINER_IMAGE: "docker.pkg.github.com/${{ github.repository }}/ansible"
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Auth Docker
+        run: |
+          docker login \
+            --username ${GITHUB_REPOSITORY%/**} \
+            --password ${{ secrets.GITHUB_TOKEN }} \
+            "${DOCKER_REGISTRY}"
+
+      - name: Build Image
+        run: |
+          docker build --tag="${{ github.sha }}" .
+          docker image tag ${{ github.sha }} "${CONTAINER_IMAGE}:${GITHUB_REF##*/}"
+          docker push "${CONTAINER_IMAGE}:${GITHUB_REF##*/}"
+          docker image tag ${{ github.sha }} "${CONTAINER_IMAGE}:latest"
+          docker push "${CONTAINER_IMAGE}:latest"
+
+      - name: Mark image stable
+        if: github.ref == 'refs/heads/master'
+        run: |
+          docker image tag ${{ github.sha }} "${CONTAINER_IMAGE}:stable"
+          docker push "${CONTAINER_IMAGE}:stable"
