@@ -1,9 +1,9 @@
 #!/usr/bin/env sh
 set -eux
 
-export ANSIBLE_VAULT_PASSWORD_FILE=/usr/local/sbin/ansible-password.sh
+export ANSIBLE_VAULT_PASSWORD_FILE=/usr/sbin/ansible-password.sh
 
-if ! -f "${ANSIBLE_VAULT_PASSWORD_FILE}"; then
+if [ ! -f "${ANSIBLE_VAULT_PASSWORD_FILE}" ]; then
   cat <<'EOF' >"${ANSIBLE_VAULT_PASSWORD_FILE}"
 #!/usr/bin/env sh
 set -eu
