@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
-set -eux
+set -eu
 
 export ANSIBLE_VAULT_PASSWORD_FILE=/usr/sbin/ansible-password.sh
 
