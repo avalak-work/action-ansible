@@ -14,7 +14,7 @@ jobs:
     env:
       DOCKER_REGISTRY: "docker.pkg.github.com"
       # CONTAINER_IMAGE: "docker.pkg.github.com/${{ github.repository }}/ansible"
-      CONTAINER_IMAGE: "workutils/action-ansible"
+      CONTAINER_IMAGE: "${{ secrets.DOCKERHUB_USERNAME }}/action-ansible"
 
     steps:
       - uses: actions/checkout@v2
