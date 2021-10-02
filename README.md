@@ -1,5 +1,7 @@
 # GitHub Action Ansible
 
+[![shellcheck][workflow-image]][workflow-actions]
+
 ---
 
 ```yaml
@@ -9,3 +11,7 @@
     vault_password: ${{ secrets.ANSIBLE_VAULT_PASSWORD }}
     playbook: qwerty.yml
 ```
+
+[workflow-image]: https://github.com/avalak-work/ansible-action/workflows/shell-shellcheck/badge.svg "Shell Shellcheck"
+
+[workflow-actions]: https://github.com/avalak-work/ansible-action/actions?query=workflow%3Ashell-shellcheck
