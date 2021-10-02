@@ -1,13 +1,13 @@
 ## Dockerfile
 ## https://docker.github.io/engine/reference/builder/
 
-FROM alpine:3.12
+FROM alpine:3
 
 ## https://docs.ansible.com/ansible/latest/reference_appendices/config.html#host-key-checking
 ENV ANSIBLE_HOST_KEY_CHECKING=${ANSIBLE_HOST_KEY_CHECKING:-false}
 
 RUN set -eux; \
-    apk add --no-cache \
+    apk --no-cache add \
         python3 py3-pip \
         ansible \
         gcc python3-dev libc-dev libffi-dev openssl-dev \

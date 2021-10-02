@@ -4,7 +4,7 @@ set -eu
 export ANSIBLE_VAULT_PASSWORD_FILE=/usr/sbin/ansible-password.sh
 
 if [ ! -f "${ANSIBLE_VAULT_PASSWORD_FILE}" ]; then
-  cat <<'EOF' >"${ANSIBLE_VAULT_PASSWORD_FILE}"
+  cat <<'EOF' > "${ANSIBLE_VAULT_PASSWORD_FILE}"
 #!/usr/bin/env sh
 set -eu
 echo ${INPUT_VAULT_PASSWORD:-}
