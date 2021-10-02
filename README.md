@@ -16,8 +16,8 @@
 
 [workflow-image]: https://github.com/avalak-work/action-ansible/workflows/shell-shellcheck/badge.svg "Shell Shellcheck"
 
-[workflow-actions]: https://github.com/avalak-work/action-ansible/actions?query=workflow%3Ashell-shellcheck
+[workflow-actions]: https://github.com/avalak-work/action-ansible/actions/workflows/shell-shellcheck.yml
 
-[workflow-docker-image]: https://github.com/avalak-work/action-ansible/workflows/build-image/badge.svg "Build and push docker image"
+[workflow-docker-image]: https://github.com/avalak-work/action-ansible/actions/workflows/build-image.yml/badge.svg "Build and push docker image"
 
-[workflow-docker-action]: https://github.com/avalak-work/action-ansible/actions?query=workflow%3Abuild-image
+[workflow-docker-action]: https://github.com/avalak-work/action-ansible/actions/workflows/build-image.yml
