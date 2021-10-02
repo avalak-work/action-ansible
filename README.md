@@ -17,6 +17,6 @@
 
 [workflow-actions]: https://github.com/avalak-work/action-ansible/actions?query=workflow%3Ashell-shellcheck
 
-[workflow-docker-image]: https://github.com/avalak-work/action-ansible/workflows/docker-image/badge.svg "Build and push docker image"
+[workflow-docker-image]: https://github.com/avalak-work/action-ansible/workflows/build-image/badge.svg "Build and push docker image"
 
-[workflow-docker-action]: https://github.com/avalak-work/action-ansible/actions?query=workflow%3Anode-unittests
+[workflow-docker-action]: https://github.com/avalak-work/action-ansible/actions?query=workflow%3Abuild-image
