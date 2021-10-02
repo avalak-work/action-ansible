@@ -12,6 +12,6 @@
     playbook: qwerty.yml
 ```
 
-[workflow-image]: https://github.com/avalak-work/ansible-action/workflows/shell-shellcheck/badge.svg "Shell Shellcheck"
+[workflow-image]: https://github.com/avalak-work/action-ansible/workflows/shell-shellcheck/badge.svg "Shell Shellcheck"
 
-[workflow-actions]: https://github.com/avalak-work/ansible-action/actions?query=workflow%3Ashell-shellcheck
+[workflow-actions]: https://github.com/avalak-work/action-ansible/actions?query=workflow%3Ashell-shellcheck
