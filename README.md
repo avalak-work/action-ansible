@@ -1,5 +1,6 @@
 # GitHub Action Ansible
 
+[![workutils](https://img.shields.io/docker/pulls/workutils/action-ansible.svg)](https://hub.docker.com/r/workutils/action-ansible)
 [![docker-image][workflow-docker-image]][workflow-docker-action]
 [![shellcheck][workflow-image]][workflow-actions]
 

@@ -21,6 +21,7 @@ inputs:
 
 runs:
   using: 'docker'
-  image: 'docker://docker.pkg.github.com/avalak-work/action-ansible/ansible:latest'
+  image: 'docker://workutils/action-ansible:latest'
+#  image: 'docker://docker.pkg.github.com/avalak-work/action-ansible/ansible:latest'
   args:
     - ${{ inputs.action }}
