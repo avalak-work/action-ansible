@@ -21,6 +21,6 @@ inputs:
 
 runs:
   using: 'docker'
-  image: 'Dockerfile'
+  image: 'docker.pkg.github.com/action-ansible/ansible'
   args:
     - ${{ inputs.action }}
