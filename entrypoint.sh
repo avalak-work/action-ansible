@@ -1,7 +1,7 @@
-#!/usr/bin/env bash
-set -euo pipefail
+#!/usr/bin/env sh
+set -eu
 
-if [[ -n "${INPUT_VAULT_PASSWORD}" ]]; then
+if [ -n "${INPUT_VAULT_PASSWORD}" ]; then
   ## https://docs.ansible.com/ansible/latest/reference_appendices/config.html#default-vault-password-file
   export ANSIBLE_VAULT_PASSWORD_FILE=/usr/sbin/ansible-password.sh
   if [ ! -f "${ANSIBLE_VAULT_PASSWORD_FILE}" ]; then
